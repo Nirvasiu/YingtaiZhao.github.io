@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultPop – Pop Culture Collectables & Merch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION (not counted as content section) -->
+    <!-- ============================================ -->
+    <header class="site-header">
+        <nav class="cs-nav">
+            <a href="#" class="cs-logo">
+                <span class="cs-logo-vault">VAULT</span><span class="cs-logo-pop">POP</span>
+            </a>
+            <ul class="cs-nav-links">
+                <li><a href="#hero-1785">Home</a></li>
+                <li><a href="#gallery-1446">Shop</a></li>
+                <li><a href="#services-448">New Arrivals</a></li>
+                <li><a href="#contact-1388">Contact</a></li>
+            </ul>
+            <div class="cs-cart-icon" id="cartIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cs-cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: HERO                             -->
+    <!-- CodeStitch #1785 – Centered Hero            -->
+    <!-- Customised: text, image, colours            -->
+    <!-- ============================================ -->
+    <section id="hero-1785">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Australia's #1 Pop Culture Store</span>
+                <h1 class="cs-title">Your Collection Starts Here</h1>
+                <p class="cs-text">
+                    Funko Pops, band merch, anime figures, and more. Thousands of items for every fandom — new stock added daily.
+                </p>
+                <div class="cs-button-group">
+                    <a href="#gallery-1446" class="cs-button-solid cs-button1">Shop Now</a>
+                    <a href="#services-448" class="cs-button-solid cs-button2">New Arrivals</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Image – replace with your hero-bg.jpg -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="images/hero-bg.jpg">
+            <source media="(min-width: 601px)" srcset="images/hero-bg.jpg">
+            <img loading="lazy" decoding="async" src="images/hero-bg.jpg" alt="Pop culture collectables store" width="1920" height="1200" aria-hidden="true">
+        </picture>
+
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg" alt="" height="161" width="1920" loading="lazy" decoding="async">
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: PRODUCT CATEGORIES               -->
+    <!-- CodeStitch #1446 – 8-Image Gallery          -->
+    <!-- Customised: 6 images, category labels       -->
+    <!-- ============================================ -->
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">What We Sell</span>
+                    <h2 class="cs-title">Browse by Category</h2>
+                </div>
+            </div>
+            <div class="cs-gallery">
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-funko.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-funko.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-funko.jpg" alt="Funko Pop vinyl figures collection" width="305" height="400">
+                </picture>
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-tshirts.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-tshirts.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-tshirts.jpg" alt="Band and music T-shirts" width="305" height="400">
+                </picture>
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-anime.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-anime.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-anime.jpg" alt="Anime merchandise and figures" width="305" height="400">
+                </picture>
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-comics.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-comics.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-comics.jpg" alt="Comics and superhero merchandise" width="305" height="400">
+                </picture>
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-accessories.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-accessories.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-accessories.jpg" alt="Pop culture accessories and bags" width="305" height="400">
+                </picture>
+
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="images/cat-home.jpg">
+                    <source media="(min-width: 601px)" srcset="images/cat-home.jpg">
+                    <img loading="lazy" decoding="async" src="images/cat-home.jpg" alt="Pop culture home decor items" width="305" height="400">
+                </picture>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: NEW ARRIVALS / FEATURED          -->
+    <!-- CodeStitch #448 – 3-Card Services           -->
+    <!-- Customised: product cards, images, text     -->
+    <!-- ============================================ -->
+    <section id="services-448">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Fresh In Store</span>
+                <h2 class="cs-title">Just Landed</h2>
+                <p class="cs-text">
+                    New stock arrives every day. Grab these hot items before they sell out.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+
+                <li class="cs-item">
+                    <div class="cs-flex">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/user.svg" alt="new" width="70" height="70">
+                        </picture>
+                        <h3 class="cs-h3">Batman – Harley Quinn Corvette 1:24</h3>
+                        <p class="cs-item-text">A stunning die-cast model — perfect for DC collectors. Limited run.</p>
+                        <button class="cs-link cs-add-to-cart">Add to Cart – $49.95</button>
+                    </div>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="images/prod-batman.jpg">
+                        <source media="(min-width: 601px)" srcset="images/prod-batman.jpg">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="images/prod-batman.jpg" alt="Batman Harley Quinn Corvette 1:24 scale model" width="345" height="428">
+                    </picture>
+                </li>
+
+                <li class="cs-item">
+                    <div class="cs-flex">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/tree.svg" alt="hot" width="70" height="70">
+                        </picture>
+                        <h3 class="cs-h3">Demon Slayer – Series of Figurines Pop!</h3>
+                        <p class="cs-item-text">One of our best-sellers. Standard size Funko Pop vinyl figure.</p>
+                        <button class="cs-link cs-add-to-cart">Add to Cart – $24.95</button>
+                    </div>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="images/prod-demonslayer.jpg">
+                        <source media="(min-width: 601px)" srcset="images/prod-demonslayer.jpg">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="images/prod-demonslayer.jpg" alt="Demon Slayer Tanjiro Kamado Funko Pop vinyl figure" width="345" height="428">
+                    </picture>
+                </li>
+
+                <li class="cs-item">
+                    <div class="cs-flex">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/truck.svg" alt="limited" width="70" height="70">
+                        </picture>
+                        <h3 class="cs-h3">Guardians of the Galaxy – Drax &amp; Groot Figurines</h3>
+                        <p class="cs-item-text">Q-version figurines. Only a few left.</p>
+                        <button class="cs-link cs-add-to-cart">Add to Cart – $89.95</button>
+                    </div>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="images/prod-drax.jpg">
+                        <source media="(min-width: 601px)" srcset="images/prod-drax.jpg">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="images/prod-drax.jpg" alt="Guardians of the Galaxy Drax and Groot diorama figure" width="345" height="428">
+                    </picture>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: ABOUT + CONTACT                  -->
+    <!-- CodeStitch #1388 – Contact Form             -->
+    <!-- Customised: VaultPop info, fictional details-->
+    <!-- ============================================ -->
+    <section id="contact-1388">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Get In Touch</span>
+                <h2 class="cs-title">About VaultPop</h2>
+                <p class="cs-text">
+                    VaultPop is a Melbourne-based pop culture store specialising in Funko Pop vinyls, band merchandise, anime collectables, and everything in between. Whether you're a seasoned collector or just starting out, we have something for every fandom.
+                </p>
+                <p class="cs-text">
+                    New items arrive daily. Come visit us or send a message — we'd love to hear from you.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Phone</span>
+                            <a href="tel:0391234567" class="cs-link">(03) 9123 4567</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg" alt="email icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Email</span>
+                            <a href="mailto:hello@vaultpop.com.au" class="cs-link">hello@vaultpop.com.au</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Address</span>
+                            <a href="" class="cs-link">42 Pop Culture Avenue, Croydon VIC 3136</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post">
+                <h3 class="cs-h3">Send Us a Message</h3>
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Your name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="your@email.com">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Ask us anything about our stock..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit" id="contactSubmit">Send Message</button>
+                <p class="cs-form-feedback" id="formSuccess" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- FOOTER (not counted as content section)     -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="cs-logo-vault">VAULT</span><span class="cs-logo-pop">POP</span>
+                <p>Melbourne's pop culture destination.<br>New stock arriving daily.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Funko Pop Vinyls</a></li>
+                    <li><a href="#">Band T-Shirts</a></li>
+                    <li><a href="#">Anime Merch</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Gift Vouchers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VaultPop. All rights reserved. Fictional business created for academic purposes.</p>
+        </div>
+    </footer>
+
+
+    <!-- ============================================ -->
+    <!-- JS FEATURE: BACK TO TOP BUTTON              -->
+    <!-- ============================================ -->
+    <button id="backToTop" class="cs-back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

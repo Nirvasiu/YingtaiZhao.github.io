@@ -1,0 +1,757 @@
+/* ============================================================
+   VaultPop – styles.css
+   Combines: CodeStitch core styles + stitch-specific CSS
+   + custom VaultPop overrides (dark theme, Bebas Neue, red accent)
+   ============================================================ */
+
+
+/* ============================================================
+   CODESTITCH CORE STYLES (required by all stitches)
+   ============================================================ */
+:root {
+    --primary: #e63946;           /* VaultPop red (replaces CS orange) */
+    --primaryLight: #ff6b6b;
+    --secondary: #f4a261;
+    --secondaryLight: #f4a261;
+    --headerColor: #ffffff;
+    --bodyTextColor: #cccccc;
+    --bodyTextColorWhite: #fafbfc;
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+    /* VaultPop custom variables */
+    --clr-bg: #0d0d0d;
+    --clr-surface: #161616;
+    --clr-surface-2: #1e1e1e;
+    --clr-border: #2a2a2a;
+    --ff-display: 'Bebas Neue', sans-serif;
+    --ff-body: 'Barlow', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-bg);
+    color: var(--bodyTextColor);
+    font-family: var(--ff-body);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-family: var(--ff-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1em;
+    letter-spacing: 0.03em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
+
+/* ============================================================
+   NAVIGATION (custom VaultPop nav)
+   ============================================================ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.cs-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.cs-logo { font-family: var(--ff-display); font-size: 1.8rem; letter-spacing: 0.05em; }
+.cs-logo-vault { color: #ffffff; }
+.cs-logo-pop   { color: var(--primary); }
+
+.cs-nav-links { display: flex; gap: 2rem; }
+.cs-nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    transition: color 0.25s;
+}
+.cs-nav-links a:hover { color: var(--primary); }
+
+.cs-cart-icon { position: relative; cursor: pointer; color: #f0f0f0; transition: color 0.25s; }
+.cs-cart-icon:hover { color: var(--primary); }
+.cs-cart-count {
+    position: absolute;
+    top: -8px; right: -10px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+
+/* ============================================================
+   SECTION 1: HERO (#1785) – CUSTOM OVERRIDES
+   ============================================================ */
+#hero-1785 {
+    padding: clamp(12.5rem, 25.95vw, 18.75rem) 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#hero-1785 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+#hero-1785 .cs-content {
+    text-align: center;
+    width: 100%;
+    max-width: 46.875rem;
+}
+
+#hero-1785 .cs-title,
+#hero-1785 .cs-text {
+    color: var(--bodyTextColorWhite);
+}
+
+#hero-1785 .cs-text { margin-bottom: 2rem; }
+
+#hero-1785 .cs-button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cs-button-solid {
+    font-family: var(--ff-body);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 12.5rem;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.cs-button1 { background-color: var(--primary); color: #fff; border-color: var(--primary); }
+.cs-button1:hover { background: transparent; color: var(--primary); }
+
+.cs-button2 { background: transparent; color: #fff; border-color: #fff; }
+.cs-button2:hover { background: #fff; color: #0d0d0d; }
+
+#hero-1785 .cs-graphic {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+    opacity: 0.15;
+}
+
+#hero-1785 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+#hero-1785 .cs-background:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(230,57,70,0.25) 0%, rgba(13,13,13,0.75) 100%);
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#hero-1785 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (min-width: 120rem) {
+    #hero-1785 { padding-bottom: 14vw; }
+}
+
+
+/* ============================================================
+   SECTION 2: GALLERY (#1446) – CUSTOM OVERRIDES
+   ============================================================ */
+#gallery-1446 {
+    padding: var(--sectionPadding);
+    background-color: var(--clr-surface);
+}
+
+#gallery-1446 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+}
+
+#gallery-1446 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+#gallery-1446 .cs-title { margin: 0; color: #ffffff; }
+
+#gallery-1446 .cs-gallery {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+    position: relative;
+}
+
+#gallery-1446 .cs-image {
+    min-height: clamp(16.25rem, 60vw, 20rem);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border: 1px solid var(--clr-border);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+#gallery-1446 .cs-image:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+#gallery-1446 .cs-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+#gallery-1446 .cs-image:hover img { transform: scale(1.06); }
+
+
+/* ============================================================
+   SECTION 3: SERVICES (#448) – CUSTOM OVERRIDES
+   ============================================================ */
+#services-448 {
+    padding: var(--sectionPadding);
+    background-color: var(--clr-bg);
+}
+
+#services-448 .cs-container {
+    width: 100%;
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+}
+
+#services-448 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-448 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: clamp(1rem, 1.5vw, 1.25rem);
+    row-gap: clamp(1.5rem, 5vw, 3.75rem);
+}
+
+#services-448 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 22.5rem;
+    /* No top padding — image sits at the top now, icon hidden */
+    padding-top: 0 !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid var(--clr-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--clr-surface);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#services-448 .cs-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(230,57,70,0.15);
+}
+
+/* Image now shows at the TOP of the card, full width */
+#services-448 .cs-picture {
+    width: 100%;
+    height: 14rem;
+    border-radius: 0;
+    background-color: var(--clr-surface-2);
+    overflow: hidden;
+    display: block;
+    position: relative; /* changed from absolute */
+    top: auto;
+    left: auto;
+    z-index: 0;
+    flex-shrink: 0;
+}
+
+#services-448 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s;
+}
+
+#services-448 .cs-item:hover .cs-picture img { transform: scale(1.05); }
+
+/* Move image to top using order */
+#services-448 .cs-picture { order: -1; }
+
+/* Card content below the image */
+#services-448 .cs-flex {
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#services-448 .cs-flex:before { display: none; }
+
+/* Hide the circular icon — not needed with visible image */
+#services-448 .cs-wrapper { display: none; }
+#services-448 .cs-icon { display: none; }
+
+#services-448 .cs-h3 {
+    font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+    line-height: 1.3em;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+#services-448 .cs-item-text {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 clamp(1.25rem, 1.5vw, 1.5rem);
+    color: var(--bodyTextColor);
+}
+
+#services-448 .cs-link {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-family: var(--ff-body);
+    transition: background 0.25s;
+}
+#services-448 .cs-link:hover { background: #c1121f; }
+
+@media only screen and (min-width: 48rem) {
+    #services-448 .cs-container { max-width: 80rem; }
+    #services-448 .cs-card-group { flex-direction: row; }
+    #services-448 .cs-item { width: 47%; }
+}
+
+@media only screen and (min-width: 64rem) {
+    #services-448 .cs-card-group { flex-wrap: nowrap; }
+    #services-448 .cs-item {
+        width: 100%;
+        padding-top: clamp(9rem, 17.5vw, 17.125rem);
+    }
+    #services-448 .cs-picture {
+        height: clamp(14rem, 28vw, 26.75rem);
+    }
+}
+
+
+/* ============================================================
+   SECTION 4: CONTACT (#1388) – CUSTOM OVERRIDES
+   ============================================================ */
+#contact-1388 {
+    padding: var(--sectionPadding);
+    background-color: var(--clr-surface);
+    position: relative;
+    z-index: 1;
+}
+
+#contact-1388 .cs-container {
+    width: 100%;
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    gap: clamp(2rem, 3vw, 3rem);
+    position: relative;
+}
+
+#contact-1388 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact-1388 .cs-title { max-width: 23ch; }
+#contact-1388 .cs-text { margin-bottom: 1rem; color: var(--bodyTextColor); }
+#contact-1388 .cs-text:last-of-type { margin-bottom: 2rem; }
+
+#contact-1388 .cs-ul {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+#contact-1388 .cs-li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+#contact-1388 .cs-li:hover .cs-icon-wrapper { transform: scale(1.1); }
+
+#contact-1388 .cs-header {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+    display: block;
+}
+
+#contact-1388 .cs-link {
+    font-size: 0.95rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColor);
+    display: block;
+}
+#contact-1388 .cs-link:hover { color: var(--primary); text-decoration: underline; }
+
+#contact-1388 .cs-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--clr-border);
+    background: var(--clr-surface-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    transition: transform 0.3s, border-color 0.3s;
+}
+#contact-1388 .cs-li:hover .cs-icon-wrapper { border-color: var(--primary); }
+
+#contact-1388 .cs-icon {
+    width: 1.4rem;
+    height: auto;
+    display: block;
+    filter: grayscale(1) brightness(2000%);
+}
+
+#contact-1388 .cs-form {
+    width: 100%;
+    max-width: 39.375rem;
+    padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+    box-sizing: border-box;
+    background-color: var(--clr-surface-2);
+    border: 1px solid var(--clr-border);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#contact-1388 .cs-h3 {
+    font-family: var(--ff-display);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: 0.04em;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: #ffffff;
+    width: 100%;
+}
+
+#contact-1388 .cs-label {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
+
+#contact-1388 .cs-input {
+    font-size: 1rem;
+    font-family: var(--ff-body);
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    color: #ffffff;
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.25s;
+}
+#contact-1388 .cs-input:focus { border-color: var(--primary); }
+#contact-1388 .cs-input::placeholder { color: #555; }
+
+#contact-1388 .cs-textarea {
+    min-height: 7.5rem;
+    height: auto;
+    padding-top: 1rem;
+    margin-bottom: 0.75rem;
+    resize: vertical;
+}
+
+#contact-1388 .cs-button-solid.cs-submit {
+    width: 100%;
+    min-width: 12.5rem;
+    border: none;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+#contact-1388 .cs-button-solid.cs-submit:hover { background: #c1121f; }
+
+.cs-form-feedback {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 1.2em;
+    color: #4caf50;
+}
+
+@media only screen and (min-width: 48rem) {
+    #contact-1388 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #contact-1388 .cs-content { width: 47%; flex: none; }
+    #contact-1388 .cs-submit { width: auto; }
+}
+
+@media only screen and (min-width: 64rem) {
+    #contact-1388 .cs-form { width: 46%; max-width: 36.125rem; }
+    #contact-1388 .cs-submit { width: auto; }
+}
+
+
+/* ============================================================
+   BACK TO TOP BUTTON (JavaScript Feature)
+   ============================================================ */
+.cs-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.cs-back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.cs-back-to-top:hover { background: #c1121f; }
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+    background: var(--clr-bg);
+    border-top: 1px solid var(--clr-border);
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.footer-brand .cs-logo-vault { font-family: var(--ff-display); font-size: 1.6rem; color: #fff; }
+.footer-brand .cs-logo-pop   { font-family: var(--ff-display); font-size: 1.6rem; color: var(--primary); }
+.footer-brand p { color: #888; font-size: 0.85rem; margin-top: 0.5rem; line-height: 1.6; }
+
+.footer-links h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin: 0 0 0.75rem;
+}
+.footer-links li + li { margin-top: 0.5rem; }
+.footer-links a { color: #888; font-size: 0.9rem; transition: color 0.25s; }
+.footer-links a:hover { color: var(--primary); }
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Defined here so it's also available in VaultPop surface contexts */
+:root {
+    --clr-surface-2: #1e1e1e;
+    --medium: #1e1e1e;
+}
